@@ -1,0 +1,19 @@
+{
+  "1": {
+    "msg": "Wie kann ich dir helfen?",
+    "answers": [
+      {
+        "msg": "Ich bin Behindert",
+        "refID": 1024
+      },
+      {
+        "msg": "Ich bin Behindert",
+        "refID": 1024
+      }
+    ]
+  },
+  "1024": {
+    "msg": "ich weiß. Gespräch beendet.",
+    "answers": {}
+  }
+}

@@ -24,10 +24,10 @@ document.getElementById("chatbot-close").addEventListener('click', function() {
 var host = 'http://test-felix.werbewind-dev1.com'
 var httpReq = null;
 
-function sendMessage(msg, depth) {
+function sendMessage(depth, index) {
   httpReq = new XMLHttpRequest();
   if(httpReq) {
-    httpReq.open('GET', host + "?depth=" + depth + "&message=" + msg, true);
+    httpReq.open('GET', host + "?depth=" + depth + "&index=" + index, true);
     httpReq.onreadystatechange = function() {
       if(httpReq.readyState === 4) {
         console.log(httpReq.response);
@@ -40,7 +40,7 @@ function sendMessage(msg, depth) {
 var depth = 1;
 Array.from(document.getElementsByClassName('chatbot-message')).forEach(function(msg) {
   msg.addEventListener('click', function() {
-    sendMessage(this.innerText, depth);
+    sendMessage(this.getAttribute('data-depth'), this.getAttribute('data-depth'));
     depth++;
   })
 });
