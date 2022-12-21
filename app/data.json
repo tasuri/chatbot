@@ -3,17 +3,30 @@
     "msg": "Wie kann ich dir helfen?",
     "answers": [
       {
-        "msg": "Ich bin Behindert",
-        "refID": 1024
+        "msg": "Ich habe eine Supportanfrage bzgl. eines meiner Projekte",
+        "refID": 2
       },
       {
-        "msg": "Ich bin Behindert",
-        "refID": 1024
+        "msg": "Ich habe eine Kontaktanfrage.",
+        "refID": 3
       }
     ]
   },
-  "1024": {
-    "msg": "ich weiß. Gespräch beendet.",
+  "2": {
+    "msg": "Wie ka11111nn ich dir helfen?",
+    "answers": [
+      {
+        "msg": "Ich habe11111 eine Supportanfrage bzgl. eines meiner Projekte",
+        "refID": 2
+      },
+      {
+        "msg": "Ich habe e^^^^^^ine Kontaktanfrage.",
+        "refID": 3
+      }
+    ]
+  },
+  "9999": {
+    "msg": "Auf unserer Seite ist ein Fehler passiert, bitte versuch' es nochmal oder kontaktiere unseren Support direkt über unser Kontaktformular",
     "answers": {}
   }
 }

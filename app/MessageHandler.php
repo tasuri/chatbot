@@ -1,19 +1,22 @@
 <?php
 class MessageHandler {
 
-    private $depth, $index;
+    private $index;
     private $data;
 
-    public function __construct(int $depth, int $index)
+    public function __construct(int $index)
     {
-        $this->depth = htmlspecialchars($depth);
         $this->index = htmlspecialchars($index);
 
-        $this->data = json_decode(file_get_contents("data.json"));
+        $this->data = json_decode(file_get_contents("data.json"), true);
     }
 
     public function answerMessage() {
-        echo $this->data[$this->depth][$this->index];
+        if(isset($this->data[$this->index])) {
+            echo json_encode($this->data[$this->index]);
+        } else {
+            echo json_encode($this->data[9999]);
+        }
     }
 
 }
