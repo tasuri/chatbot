@@ -43,9 +43,10 @@ function sendMessage(index) {
 }
 
 Array.from(document.getElementsByClassName('chatbot-message')).forEach(function (msg) {
-  if (!msg.classList.contains('bot-message')) {
+  if (msg.classList.contains('option')) {
     msg.addEventListener('click', function () {
       sendMessage(this.getAttribute('data-index'));
+      this.remove();
     })
   }
 });
@@ -61,6 +62,7 @@ function addMessagesToChat(response) {
   response['answers'].forEach(function(answer) {
     var newAnswer = document.createElement('div');
     newAnswer.classList.add('chatbot-message');
+    newAnswer.classList.add('option');
     newAnswer.setAttribute('data-index', answer['refID']);
     newAnswer.innerText = answer['msg'];
     newAnswer.addEventListener('click', function() {

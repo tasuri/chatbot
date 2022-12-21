@@ -23,7 +23,7 @@ body {
     right: 50px;
     overflow: hidden;
     background: #fafafa;
-    width: 350px;
+    width: 400px;
     height: 450px;
     border-radius: 10px;
     transition: all 0.4s;
@@ -39,6 +39,7 @@ body {
     max-height: 100%;
     min-height: 450px;
     overflow-y: auto;
+    padding: 30px 8px;
     display: block;
 }
 
@@ -66,9 +67,9 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    padding: 30px 20px;
+    overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
+    padding: 0 12px;
 }
 
 .chatbot-message {
@@ -78,8 +79,6 @@ body {
     padding: 5px 12px;
     font-weight: 700;
     filter: drop-shadow(2px 3px 3px rgba(0,0,0,0.25));
-    cursor: pointer;
-    user-select: none;
     max-width: 220px;
     transition: all 0.05s;
 }
@@ -99,14 +98,6 @@ body {
     border: 7px solid transparent;
     border-left-color: #00FF66;
     filter: drop-shadow(2px 3px 3px rgba(0,0,0,0.25));
-}
-
-.chatbot-message:active {
-    transform: scale(0.97);
-}
-
-.chatbot-message.option {
-    transform: scale(1.1);
 }
 
 .chatbot-message.bot-message {
@@ -131,6 +122,43 @@ body {
     border: 7px solid transparent;
     border-right-color: #181818;
     filter: drop-shadow(2px 3px 3px rgba(0,0,0,0.25));
+}
+
+.chatbot-message.option {
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    z-index: 5;
+    width: max-content;
+    max-width: 94%;
+    font-weight: 400;
+    font-family: "Courier New", Arial, sans-serif;
+}
+
+.chatbot-message.option:before {
+    content: '';
+    position: absolute;
+    width: 92%;
+    left: 4%;
+    bottom: 6px;
+    height: 1px;
+    background: #181818;
+    transform: scaleX(0);
+    transition: transform .4s;
+    transform-origin: bottom left;
+}
+
+.chatbot-message.option:hover:before {
+    transform: scaleX(1);
+}
+
+.chatbot-message.option:after {
+    display: none;
+}
+
+.chatbot-message.option:active {
+    transform: scale(0.97);
 }
 
 .chatbot-send {
