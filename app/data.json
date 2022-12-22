@@ -1,9 +1,9 @@
 {
   "1": {
-    "msg": "Wie kann ich dir helfen?",
+    "msg": "Hallo, wie kann ich dir helfen?",
     "answers": [
       {
-        "msg": "Ich habe eine Supportanfrage bzgl. eines meiner Projekte",
+        "msg": "Ich habe eine Supportanfrage.",
         "refID": 2
       },
       {
@@ -13,17 +13,41 @@
     ]
   },
   "2": {
-    "msg": "Wie ka11111nn ich dir helfen?",
+    "msg": [
+      "Wie dringend ist deine Anfrage?",
+      "Bitte wähle eine Priorität aus"
+    ],
     "answers": [
       {
-        "msg": "Ich habe11111 eine Supportanfrage bzgl. eines meiner Projekte",
-        "refID": 2
+        "msg": "nicht dringend.",
+        "refID": 9999
       },
       {
-        "msg": "Ich habe e^^^^^^ine Kontaktanfrage.",
+        "msg": "dringend",
+        "refID": 9999
+      },
+      {
+        "msg": "sehr dringend",
+        "refID": 9999
+      },
+      {
+        "msg": "Notfall",
         "refID": 3
       }
     ]
+  },
+  "3": {
+    "msg": "Bitte melde dich bei dieser Nummer: 08341 187",
+    "answers": [
+      {
+        "msg": "Okay.",
+        "refID": 1
+      }
+    ]
+  },
+  "9998": {
+    "msg": "Danke für das Gespräch.",
+    "answers": []
   },
   "9999": {
     "msg": "Auf unserer Seite ist ein Fehler passiert, bitte versuch' es nochmal oder kontaktiere unseren Support direkt über unser Kontaktformular",

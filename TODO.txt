@@ -1,0 +1,1 @@
+Strukturierung eigener relativen Box für Antwortfeld und Nachrichtenfeld
