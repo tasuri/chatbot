@@ -25,7 +25,7 @@ document.getElementById("chatbot-close").addEventListener('click', function () {
   document.getElementById('chatbot').classList.add('hidden');
 })
 
-var host = 'http://test-felix.werbewind-dev1.com'
+var host = '---------------------------'
 var httpReq = null;
 
 function sendMessage(index) {
